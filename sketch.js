@@ -24,7 +24,7 @@ function setup () {
 }
 
 function draw () {
-  for(let i=0;i<4000;i++) {
+  for(let i=0;i<20736;i++) {
     let x = floor(random(sourceImg.width));
     let y = floor(random(sourceImg.height));
     let pix = sourceImg.get(x, y);
