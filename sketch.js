@@ -34,16 +34,18 @@ function draw () {
     for(let i = 0; i < X_STOP; i++) {
       colorMode(RGB);
       let pix = [0, 0, 0, 255]
+      let colCH = 0;
       let mask = maskImg.get(i, j);
 
       if(mask[0] > 128){
         pix = sourceImg.get(i,j);
-        set(i,j,(Math.round(4*pix[0]/255)*64))
-        // print(Math.round(4*pix[2]/255)*64)
+        tint(1,0,0)
+        set(i,j,(Math.round(4*pix[colCH]/255)*64));
       }
+
       else {
         pix = sourceImg.get(i,j);
-        set(i,j,pix)
+        set(i,j,pix);
       }
     }
   }
@@ -51,8 +53,9 @@ function draw () {
   updatePixels();
 
   if(renderCounter > Y_STOP) {
-    console.log("Done!")
+    console.log("Done!");
     noLoop();
+    saveArtworkImage(outputFile);
   }
 }
 
