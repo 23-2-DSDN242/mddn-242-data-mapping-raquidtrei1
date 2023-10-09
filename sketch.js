@@ -34,12 +34,14 @@ function draw () {
     for(let i = 0; i < X_STOP; i++) {
       colorMode(RGB);
       let pix = [0, 0, 0, 255]
-      let colCH = 0;
+      let colCH = 0; // sets colour channel for quantizing
       let mask = maskImg.get(i, j);
 
       if(mask[0] > 128){
         pix = sourceImg.get(i,j);
-        tint(1,0,0)
+
+        // This function reduces the amount of colours from 255 per channel down to just 4.
+        // As it currently stands I can only create this effect using only one colour channel.
         set(i,j,(Math.round(4*pix[colCH]/255)*64));
       }
 
@@ -55,7 +57,7 @@ function draw () {
   if(renderCounter > Y_STOP) {
     console.log("Done!");
     noLoop();
-    saveArtworkImage(outputFile);
+    // saveArtworkImage(outputFile);
   }
 }
 
