@@ -6,4 +6,4 @@ The images shown are ones of the now obselete "MiniDisc" music format, introduce
 
 My effect is meant to represent how computer graphics looked in the early 90s when MiniDisc was first introduced. Colour was very limited as some machines can only render up four thousand colours, as opposed to the sixteen-or-so million that modern machines can display. I've exaggeratted this effect so that my images only use four grey scale colours.
 
-The masks for each image have this particular effect applied to showcase how these objects are a relic of a not-so-distant past. If there as a single disc present in the image, I applied a tint according to the discs original colour to add more visual interest.
+The masks for each image have this particular effect applied to showcase how these objects are a relic of a not-so-distant past. I have a colour and colourless version of the generator.
