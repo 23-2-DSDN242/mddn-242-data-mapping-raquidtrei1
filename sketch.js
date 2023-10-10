@@ -2,9 +2,9 @@ let sourceImg=null;
 let maskImg=null;
 
 // change these three lines as appropiate
-let sourceFile = "input_5.jpg";
-let maskFile   = "mask_5.png";
-let outputFile = "output_5.png";
+let sourceFile = "input_4.jpg";
+let maskFile   = "mask_4.png";
+let outputFile = "output_3.png";
 
 function preload() {
   sourceImg = loadImage(sourceFile);
@@ -33,16 +33,23 @@ function draw () {
   for(let j = renderCounter; j < renderCounter + linesToDraw && j < Y_STOP ; j++) {
     for(let i = 0; i < X_STOP; i++) {
       colorMode(RGB);
-      let pix = [0, 0, 0, 255]
-      let colCH = 0; // sets colour channel for quantizing
+      let pix = [0,0,0,255];
       let mask = maskImg.get(i, j);
+      let col = color(pix)
 
       if(mask[0] > 128){
         pix = sourceImg.get(i,j);
 
-        // This function reduces the amount of colours from 255 per channel down to just 4.
-        // As it currently stands I can only create this effect using only one colour channel.
-        set(i,j,(Math.round(4*pix[colCH]/255)*64));
+        let newCol = [0, 0, 0, 255];
+        newCol[0] = map(0, 0, 100, (Math.round(4*pix[0]/255)*64), 255);
+        newCol[1] = map(0, 0, 100, (Math.round(4*pix[1]/255)*64), 255);
+        newCol[2] = map(0, 0, 100, (Math.round(4*pix[2]/255)*64), 255);
+    
+        // uncomment to use colour version of renderer.
+        // set(i,j,newCol);
+
+        // uncomment to use greyscale version of renderer.
+        set(i, j, (Math.round(4*pix[2]/255)*64));
       }
 
       else {
