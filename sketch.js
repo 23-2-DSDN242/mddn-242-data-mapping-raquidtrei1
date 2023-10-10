@@ -2,9 +2,9 @@ let sourceImg=null;
 let maskImg=null;
 
 // change these three lines as appropiate
-let sourceFile = "input_5.jpg";
-let maskFile   = "mask_5.png";
-let outputFile = "output_5.png";
+let sourceFile = "input_8.jpg";
+let maskFile   = "mask_8.png";
+// let outputFile = "output_8.png";
 
 function preload() {
   sourceImg = loadImage(sourceFile);
@@ -46,10 +46,10 @@ function draw () {
         newCol[2] = map(0, 0, 100, (Math.round(4*pix[2]/255)*64), 255);
     
         // uncomment to use colour version of renderer.
-        set(i,j,newCol);
+        // set(i,j,newCol);
 
         // uncomment to use greyscale version of renderer.
-        // set(i, j, (Math.round(4*pix[2]/255)*64));
+        set(i, j, (Math.round(4*pix[1]/255)*64));
       }
 
       else {
