@@ -7,3 +7,5 @@ The images shown are ones of the now obselete "MiniDisc" music format, introduce
 My effect is meant to represent how computer graphics looked in the early 90s when MiniDisc was first introduced. Colour was very limited as some machines can only render up four thousand colours, as opposed to the sixteen-or-so million that modern machines can display. I've exaggeratted this effect so that my images only use four grey scale colours.
 
 The masks for each image have this particular effect applied to showcase how these objects are a relic of a not-so-distant past. I have a colour and colourless version of the generator.
+
+Creating masks seemed simple enough due to how the simple shapes of my masks. But sometimes the A.I would result in no mask generated, even when I put more input data in. However, it seemed like it got its act together towards the end of this assignment.
