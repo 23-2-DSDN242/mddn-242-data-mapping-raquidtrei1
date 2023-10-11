@@ -41,9 +41,9 @@ function draw () {
         pix = sourceImg.get(i,j);
 
         let newCol = [0, 0, 0, 255];
-        newCol[1] = map(0, 0, 100, (Math.round(4*pix[1]/255)*64), 255);
-        newCol[0] = map(0, 0, 100, (Math.round(4*pix[0]/255)*64), 255);
-        newCol[2] = map(0, 0, 100, (Math.round(4*pix[2]/255)*64), 255);
+        newCol[1] = map(0, 0, 100, (Math.round(4*pix[1]/255)*64), 255); //sets Red value for newCol
+        newCol[0] = map(0, 0, 100, (Math.round(4*pix[0]/255)*64), 255); //sets Green value for newCol
+        newCol[2] = map(0, 0, 100, (Math.round(4*pix[2]/255)*64), 255); //sets Blue value for newCol
     
         // uncomment to use colour version of renderer.
         // set(i,j,newCol);
